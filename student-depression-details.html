@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Depression Prediction – Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f0ff;
+      color: #333;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-back {
+      padding: 0.8rem 1.6rem;
+      background-color: #5a73fc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .btn-back:hover {
+      background-color: #3f57d6;
+    }
+
+    .feature-section {
+      margin-top: 2rem;
+    }
+
+    .feature-section img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <h1>Student Depression Prediction – Mental Health Classifier</h1>
+    <p>
+      This project focuses on predicting the likelihood of depression in students using a real-world dataset collected from Kaggle.
+      It includes data preprocessing, visualization, feature selection, and machine learning models like SVM, KNN, and Random Forest.
+    </p>
+
+    <div class="feature-section">
+      <h2>📊 Feature Visualization</h2>
+      <p>Used KDE and box plots to explore patterns such as gender-based depression, CGPA impact, and stress indicators.</p>
+      <img src="image/kde_features.png" alt="KDE Feature Visualization" />
+    </div>
+
+    <div class="feature-section">
+      <h2>📌 Feature Selection</h2>
+      <p>Used Mutual Information and RFE to select impactful features like suicidal thoughts, financial stress, and sleep duration.</p>
+      <img src="image/correlation_matrix.png" alt="Feature Correlation Matrix" />
+    </div>
+
+    <div class="feature-section">
+      <h2>📈 Model Evaluation</h2>
+      <p>Random Forest outperformed all models with 86% accuracy and recall, making it ideal for minimizing false negatives.</p>
+      <img src="image/model_comparison.png" alt="Model Comparison Results" />
+    </div>
+
+    <a href="index.html" class="btn-back">← Return to Main Page</a>
+  </div>
+</body>
+</html>

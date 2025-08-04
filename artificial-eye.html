@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Artificial Eye – Project Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f0ff;
+            color: #333;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-back {
+            padding: 0.8rem 1.6rem;
+            background-color: #5a73fc;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .btn-back:hover {
+            background-color: #3f57d6;
+        }
+
+        .feature-section {
+            margin-top: 2rem;
+        }
+
+        .feature-section img {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="image/.png" alt="Artificial Eye" class="project-img" /> -->
+        <h1>Artificial Eye – Intelligent System</h1>
+        <p>
+            This project leverages computer vision techniques to automate quality inspection in production lines.
+            It detects surface-level product defects such as cracks and scratches using image processing algorithms.
+            Features include noise addition/removal, edge detection, and product counting—all accessible via an interactive graphical interface.
+        </p>
+
+        <div class="feature-section">
+            <h2>📸 Cup Counting Feature</h2>
+            <p>The system identifies and counts circular items (e.g., cups) by analyzing shape and color features.</p>
+            <img src="image/cup.png" alt="Cup Detection Result" />
+        </div>
+
+        <div class="feature-section">
+            <h2>🕵️ Edge Detection Feature</h2>
+            <p>Defect edges such as cracks are highlighted using Canny edge detection for better visibility during quality checks.</p>
+            <img src="image/edge.png" alt="Edge Detection Result" />
+        </div>
+
+        <a href="index.html" class="btn-back">← Return to Main Page</a>
+    </div>
+</body>
+</html>

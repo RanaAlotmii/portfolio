@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EeVe – Smart Event Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f0ff;
+      color: #333;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-back {
+      padding: 0.8rem 1.6rem;
+      background-color: #5a73fc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .btn-back:hover {
+      background-color: #3f57d6;
+    }
+
+    .feature-section {
+      margin-top: 2rem;
+    }
+
+    /* .feature-section img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 0.5rem;
+    } */
+
+    .feature-section img {
+  width: 100%;
+  max-width: 300px;     /* ✅ قلل العرض الأقصى */
+  height: auto;         /* يحافظ على نسبة الأبعاد */
+  display: block;
+  margin: 1rem auto 2rem auto;  /* يوسّط الصورة ويضيف مسافة بينها */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- <img src="image/eeve_home_dark.png" alt="EeVe Home Screenshot" class="project-img" /> -->
+    <h1>EeVe – Smart Event Assistant for Riyadh</h1>
+    <p>
+      EeVe is a mobile app designed to help users in Riyadh find events that match their mood, preferences, and budget—instantly.
+      Instead of endless scrolling, users can simply chat with EeVe’s AI assistant to get personalized recommendations for nearby events like concerts, cafes, or festivals.
+    </p>
+
+    <div class="feature-section">
+      <h2>🛠️ Key Features</h2>
+      <ul>
+        <li><strong>AI Chat Assistant:</strong> GPT-powered responses tailored to each user query.</li>
+        <li><strong>Local Focus:</strong> Events filtered exclusively for Riyadh users.</li>
+        <li><strong>Real-Time Matching:</strong> Pulls live event data to match mood, time, and budget.</li>
+        <li><strong>Modern UI/UX:</strong> Flutter + GetX + Light & Dark Mode for elegant performance.</li>
+      </ul>
+    </div>
+
+    <div class="feature-section">
+      <h2>🧩 Technologies Used</h2>
+      <ul>
+        <li>Flutter + Dart for cross-platform development</li>
+        <li>Supabase for event data and auth</li>
+        <li>OpenAI GPT-3.5 for chat response</li>
+        <li>Figma for collaborative UI/UX design</li>
+        <li>Flutter packages: flutter_credit_card, provider, image_picker, dart_openai, etc.</li>
+      </ul>
+    </div>
+
+   <div class="feature-section">
+  <h2>🖼️ Screenshots</h2>
+
+  <h3>🏠 Home + Trending Categories</h3>
+  <img src="image/eeve_home_dark.png" alt="EeVe Home Screenshot" />
+
+  <h3>📍 Event Details Page</h3>
+  <img src="image/eeve_event_details.png" alt="Event Details Screenshot" />
+
+  <h3>🎟️ My Tickets Page</h3>
+  <img src="image/eeve_tickets.png" alt="My Tickets Screenshot" />
+
+  <h3>💬 AI Chat – Dark Mode</h3>
+  <img src="image/eeve_chat_dark.png" alt="Chat Assistant Screenshot" />
+</div>
+
+
+    <div class="feature-section">
+      <h2>👩‍💻 Team & My Role</h2>
+      <p>
+        Worked collaboratively as part of a 5-member team. My focus included:
+        <ul>
+          <li>Feature design</li>
+          <li>Prompt engineering</li>
+          <li>UI refinement</li>
+          <li>Data connection logic</li>
+        </ul>
+      </p>
+    </div>
+
+    <a href="index.html" class="btn-back">← Return to Main Page</a>
+  </div>
+</body>
+</html>
