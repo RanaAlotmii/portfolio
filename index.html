@@ -62,22 +62,77 @@
             letter-spacing: 1px;
         }
 
-        .nav-links {
+        /* .nav-links {
             display: flex;
             gap: 2rem;
-        }
+        } */
 
-        .nav-links a {
+        /* .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 600;
             font-size: 0.9rem;
             transition: color 0.3s ease;
-        }
-
+        } */
+/* 
         .nav-links a:hover {
             color: var(--accent);
-        }
+        } */
+.nav-links a {
+  text-decoration: none;
+  color: var(--text); /* or use #333 */
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+  color: var(--accent); /* matches your buttons */
+}
+
+
+ .nav-links {
+  display: flex;
+  gap: 2.5rem; /* try 2.5rem or 3rem for better spacing */
+  align-items: center;
+}
+
+
+  .nav-links.collapsed {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-links.expanded {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      width: 100%;
+      background-color: white;
+      margin-top: 1rem;
+    }
+/* 
+    .nav-links a {
+      padding: 0.8rem;
+      font-size: 1rem;
+    } */
+
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+
 
         /* ===== HERO SECTION ===== */
         .hero {
@@ -540,26 +595,25 @@
 </head>
 
 <body>
-<nav class="navbar">
-    <div class="container navbar-container">
-        <div class="logo">RANA</div>
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <div class="container navbar-container">
+    <div class="logo">RANA</div>
 
-        <!-- ✅ NEW: Menu Toggle Icon -->
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
+    <!-- Toggle Icon with ARIA -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
 
-        <div class="nav-links">
+    <div class="nav-links" id="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT ME</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </div>
+</nav>
 
-                <a href="#home">HOME</a>
-                <a href="#about">ABOUT ME</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#projects">PROJECTS</a>
-
-                <a href="#contact">CONTACT</a>
-            </div>
-        </div>
-    </nav>
 
     <header class="hero" id="home">
         <div class="container hero-content">
@@ -700,14 +754,33 @@
         </div>
    </footer>
 
-<!-- ✅ NEW: Toggle Navigation Script -->
-<script>
-    const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
 
-    toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  function toggleMenu() {
+    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+    toggleBtn.setAttribute("aria-expanded", !expanded);
+
+    navLinks.classList.toggle("expanded");
+    navLinks.classList.toggle("collapsed");
+  }
+
+  toggleBtn.addEventListener("click", toggleMenu);
+
+  // Collapse on load for mobile
+  if (window.innerWidth < 768) {
+    navLinks.classList.add("collapsed");
+  }
+
+  // Close menu on resize if back to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      navLinks.classList.remove("collapsed", "expanded");
+      toggleBtn.setAttribute("aria-expanded", false);
+    }
+  });
 </script>
 
 </body>
