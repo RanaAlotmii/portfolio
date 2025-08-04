@@ -180,28 +180,91 @@
     margin-top: 10rem;
 }
 
-/* 📱 تحسين الشكل في الجوال */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.nav-links.active {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        padding: 1rem 0;
+    }
+
+    .navbar-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .hero-content {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 3rem;
-        padding: 0 1rem;
-        text-align: center;
+        padding: 2rem 1rem;
     }
 
     .hero-text h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     .hero-text p {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
-/* 
-    .hero-image img {
-        max-width: 300px;
-    } */
+
+    .about-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .about-aligned-title {
+        margin-top: 0;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .contact-icons {
+        gap: 1.5rem;
+    }
 }
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
 
 
         .btn {
@@ -477,11 +540,17 @@
 </head>
 
 <body>
+<nav class="navbar">
+    <div class="container navbar-container">
+        <div class="logo">RANA</div>
 
-    <nav class="navbar">
-        <div class="container navbar-container">
-            <div class="logo">RANA</div>
-            <div class="nav-links">
+        <!-- ✅ NEW: Menu Toggle Icon -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+
                 <a href="#home">HOME</a>
                 <a href="#about">ABOUT ME</a>
                 <a href="#skills">SKILLS</a>
@@ -629,9 +698,17 @@
         <div class="copyright">
             &copy; 2025 Rana Alotmi. All Rights Reserved.
         </div>
-    </footer>
+   </footer>
 
+<!-- ✅ NEW: Toggle Navigation Script -->
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
 
 </body>
-
 </html>
