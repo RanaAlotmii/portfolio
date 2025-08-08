@@ -56,94 +56,73 @@
             align-items: center;
         }
 
-       .logo {
-  font-size: 1.4rem; /* حجم اسم RANA يبقى كما هو */
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-right: 2rem; /* ← يضيف مسافة بين RANA والقائمة */
-}
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-right: 2rem;
+        }
 
-
-
-
-        /* .nav-links {
-            display: flex;
-            gap: 2rem;
-        } */
-
-        /* .nav-links a {
+        .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: var(--text);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
-        } */
-/* 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         .nav-links a:hover {
             color: var(--accent);
-        } */
-.nav-links a {
-  text-decoration: none;
-  color: var(--text); /* or use #333 */
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.nav-links a:hover {
-  color: var(--accent); /* matches your buttons */
-}
+        }
 
 
- .nav-links {
-  display: flex;
-  gap: 2.5rem; /* try 2.5rem or 3rem for better spacing */
-  align-items: center;
-}
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
 
 
-  .nav-links.collapsed {
-    max-height: 0;
-    opacity: 0;
-    pointer-events: none;
-  }
+        .nav-links.collapsed {
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
 
-  .nav-links.expanded {
-    max-height: 500px;
-    opacity: 1;
-    pointer-events: auto;
-    flex-direction: column;
-    align-items: center;
-  }
+        .nav-links.expanded {
+            max-height: 500px;
+            opacity: 1;
+            pointer-events: auto;
+            flex-direction: column;
+            align-items: center;
+        }
 
-  @media (max-width: 768px) {
-    .logo {
-  font-size: 0,5rem; /* حجم اسم RANA يبقى كما هو */
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-right: 2rem; /* ← يضيف مسافة بين RANA والقائمة */
-}
-    .nav-links {
-      width: 100%;
-      background-color: white;
-      margin-top: 1rem;
-    }
-     .nav-links a {
-    font-size: 0.5rem; /* حجم أصغر في الجوال */
-  }
-/* 
-    .nav-links a {
-      padding: 0.8rem;
-      font-size: 1rem;
-    } */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 0, 5rem;
+                font-weight: 800;
+                letter-spacing: 1px;
+                margin-right: 2rem;
+            }
 
-    .navbar-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+            .nav-links {
+                width: 100%;
+                background-color: white;
+                margin-top: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.5rem;
+            }
+
+
+            .navbar-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
 
 
 
@@ -152,51 +131,45 @@
             padding: 6rem 0;
         }
 
-
-.hero-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  padding: 2rem;
-}
-
-.hero-text {
-  flex: 1 1 50%;
-  min-width: 280px;
-}
-
-.hero-image {
-  flex: 1 1 40%;
-  min-width: 220px;
-  text-align: center;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-/* 
+            .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
         .hero-text {
-            flex: 1 1 500px;
-            max-width: 600px;
-        } */
+            flex: 1 1 50%;
+            min-width: 280px;
+        }
+
+        .hero-image {
+            flex: 1 1 40%;
+            min-width: 220px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
 
         .hero-text h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
 
         .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            line-height: 1.9;
         }
 
 
@@ -206,200 +179,176 @@
             flex-wrap: wrap;
         }
 
-        .hero {
-    padding: 8rem 0 5rem;
-}
+        .project-card {
+            margin-bottom: 2rem;
+        }
 
-.hero-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+        .about-row {
+            margin-top: 10rem;
+        }
 
-.hero-text h1 {
-    font-size: 3.2rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-}
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
 
-.hero-text p {
-    font-size: 1.15rem;
-    margin-bottom: 2rem;
-    line-height: 1.9;
-}
-/* 
-.hero-image img {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    margin-top: 1rem;
-} */
+        .nav-links.active {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
 
-.project-card {
-    margin-bottom: 2rem;
-}
+        /* ===== NAVBAR — MOBILE OVERRIDES (append at end) ===== */
+        @media (max-width: 768px) {
 
-.about-row {
-    margin-top: 10rem;
-}
+            /* keep bar compact */
+            .navbar {
+                padding: 0.4rem 0;
+            }
 
-.menu-toggle {
-    display: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
+            /* force desktop-like row layout */
+            .navbar-container {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 0 !important;
+            }
 
-.nav-links.active {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 1rem;
-}
+            /* hide hamburger on phones (we're showing full menu) */
+            .menu-toggle {
+                display: none !important;
+            }
 
-/* @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    } */
+            /* always show links inline on phones — even if JS added .collapsed */
+            .nav-links,
+            .nav-links.collapsed,
+            .nav-links.expanded {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 0.75rem;
+                /* tighter spacing for phones */
+                margin: 0 !important;
+                padding: 0 !important;
+                width: auto !important;
+                max-height: none !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                flex-wrap: nowrap;
+            }
 
+            .nav-links a {
+                font-size: 0.78rem;
+                /* smaller so everything fits */
+                letter-spacing: 0.4px;
+                white-space: nowrap;
+                line-height: 1.1;
+                padding: 0;
+                margin: 0;
+            }
 
-/*  */
-/* ===== NAVBAR — MOBILE OVERRIDES (append at end) ===== */
-@media (max-width: 768px) {
-  /* keep bar compact */
-  .navbar { padding: 0.4rem 0; }
+            .logo {
+                font-size: 1.05rem !important;
+                letter-spacing: 0.5px;
+                font-weight: 800;
+            }
 
-  /* force desktop-like row layout */
-  .navbar-container {
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 0 !important;
-  }
-
-  /* hide hamburger on phones (we're showing full menu) */
-  .menu-toggle { display: none !important; }
-
-  /* always show links inline on phones — even if JS added .collapsed */
-  .nav-links,
-  .nav-links.collapsed,
-  .nav-links.expanded {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.75rem;              /* tighter spacing for phones */
-    margin: 0 !important;
-    padding: 0 !important;
-    width: auto !important;
-    max-height: none !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    flex-wrap: nowrap;
-  }
-
-  .nav-links a {
-    font-size: 0.78rem;        /* smaller so everything fits */
-    letter-spacing: 0.4px;
-    white-space: nowrap;
-    line-height: 1.1;
-    padding: 0;
-    margin: 0;
-  }
-
-  .logo {
-    font-size: 1.05rem !important;
-    letter-spacing: 0.5px;
-    font-weight: 800;
-  }
-
-  html, body { overflow-x: hidden; }
+            html,
+            body {
+                overflow-x: hidden;
+            }
 
 
-@media (max-width: 420px) {
-  .navbar { padding: 0.35rem 0; }
-  .nav-links { gap: 0.55rem; }
-  .nav-links a { font-size: 0.72rem; }
-  .logo { font-size: 0.98rem !important; }
-}
+            @media (max-width: 420px) {
+                .navbar {
+                    padding: 0.35rem 0;
+                }
+
+                .nav-links {
+                    gap: 0.55rem;
+                }
+
+                .nav-links a {
+                    font-size: 0.72rem;
+                }
+
+                .logo {
+                    font-size: 0.98rem !important;
+                }
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                padding: 1rem 0;
+            }
+
+            .navbar-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .about-row {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: 4rem;
+            }
+
+            .about-aligned-title {
+                margin-top: 0;
+            }
+
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+                gap: 1.5rem;
+            }
 
 
+            .contact-icons {
+                gap: 1.5rem;
+            }
+        }
 
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.6rem;
+            }
 
+            .hero-text p {
+                font-size: 0.95rem;
+            }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: white;
-        padding: 1rem 0;
-    }
-
-    .navbar-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .hero-content {
-        padding: 2rem 1rem;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    .about-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-top: 4rem;
-    }
-
-    .about-aligned-title {
-        margin-top: 0;
-    }
-
-    .projects {
-        flex-direction: column;
-        align-items: center;
-    }
-
-   .footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap; /* يمنع النزول لسطر ثاني */
-  gap: 1.5rem;       /* مسافة بين الروابط */
-}
-
-
-    .contact-icons {
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.6rem;
-    }
-
-    .hero-text p {
-        font-size: 0.95rem;
-    }
-
-    .btn {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-}
+            .btn {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
 
 
 
@@ -561,26 +510,30 @@
             gap: 2rem;
             margin-top: 1.5rem;
         }
+
         .contact-icons a img {
-    width: 50px;
-    height: 50px;
-}
+            width: 50px;
+            height: 50px;
+        }
 
 
-     .contact-icons a {
-    background-color: white;
-    color: var(--text);
-    font-size: 2.2rem; /* تكبير الأيقونة نفسها */
-    width: 95px;       /* كان 75px */
-    height: 95px;      /* كان 75px */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
+        .contact-icons a {
+            background-color: white;
+            color: var(--text);
+            font-size: 2.2rem;
+            /* تكبير الأيقونة نفسها */
+            width: 95px;
+            /* كان 75px */
+            height: 95px;
+            /* كان 75px */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
 
 
         .contact-icons a:hover {
@@ -606,7 +559,7 @@
             text-decoration: none;
             color: var(--text);
             font-weight: 600;
-            
+
         }
 
 
@@ -682,193 +635,197 @@
         }
 
         /* Footer — Mobile only */
-@media (max-width: 768px) {
-  .footer-links {
-    display: flex !important;
-    flex-direction: row !important;   /* بدال العمود */
-    flex-wrap: nowrap !important;      /* ممنوع ينزل لسطر ثاني */
-    justify-content: center;
-    gap: 1.5rem;                         /* مسافة بين الروابط */
-    white-space: nowrap;               /* ما يكسر الكلمات (ABOUT ME تبقى كلمة واحدة) */
-  }
+        @media (max-width: 768px) {
+            .footer-links {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                justify-content: center;
+                gap: 1.5rem;
+                white-space: nowrap;
+            }
 
-  .footer-links a {
-    margin: 0 !important;              /* نلغي المارجن القديم */
-    font-weight: 700;
-    font-size: 0.9rem;                 /* أصغر شوي للجوال */
-    white-space: nowrap;
-  }
-}
+            .footer-links a {
+                margin: 0 !important;
+                font-weight: 700;
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+        }
 
-/* تضييق إضافي للشاشات الصغيرة جداً */
-@media (max-width: 420px) {
-  .footer-links { gap: 0.75rem; }
-  .footer-links a { font-size: 0.9rem; }
-}
+        /* تضييق إضافي للشاشات الصغيرة جداً */
+        @media (max-width: 420px) {
+            .footer-links {
+                gap: 0.75rem;
+            }
 
-/* Contact icons — mobile */
-@media (max-width: 480px) {
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;        /* ممنوع يلف لسطر ثاني */
-    gap: 0.9rem;              /* مسافة أصغر بين الأيقونات */
-  }
+            .footer-links a {
+                font-size: 0.9rem;
+            }
+        }
 
-  .contact-icons a {
-    flex: 0 0 auto;           /* ثبّتي عرض كل أيقونة */
-    width: 58px;
-    height: 58px;
-    font-size: 1.4rem;        /* أصغر شوي */
-  }
+        /* Contact icons — mobile */
+        @media (max-width: 480px) {
+            .contact-icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                gap: 0.9rem;
+            }
 
-  /* الصور داخل الأيقونة (mail / github / linkedin / x) */
-  .contact-icons a img {
-    width: 28px;
-    height: 28px;
-  }
-}
+            .contact-icons a {
+                flex: 0 0 auto;
+                width: 58px;
+                height: 58px;
+                font-size: 1.4rem;
+            }
 
-/* شاشات أصغر جدًا – مزيد تصغير لو لسه يلف */
-@media (max-width: 360px) {
-  .contact-icons { gap: 0.7rem; }
-  .contact-icons a { width: 52px; height: 52px; }
-  .contact-icons a img { width: 24px; height: 24px; }
-}
-@media (max-width: 768px) {
-  .contact-row {
-    display: flex;
-    flex-wrap: nowrap; /* Prevents items from going to a second row */
-    gap: 0; /* Removes extra space between elements */
-    justify-content: space-between; /* Adjust spacing between them */
-  }
+            .contact-icons a img {
+                width: 28px;
+                height: 28px;
+            }
+        }
 
-  .contact-row > * {
-    flex: 0 0 auto; /* Prevent shrinking weirdly */
-    font-size: 0.85rem; /* Reduce size to fit */
-    padding: 4px; /* Optional: tighter padding */
-  }
-}
-@media (max-width: 768px) {
-  .about-section {
-    margin-top: 0.5rem!important; /* قلل المسافة العلوية */
-    padding-top: 0 !important;   /* شيل أي padding إضافي */
-  }
-}
+        @media (max-width: 360px) {
+            .contact-icons {
+                gap: 0.7rem;
+            }
 
-/* الجوال: اجعل نص About بمحاذاة لليسار وأصغر حجمًا */
-@media (max-width: 768px) {
-  .about-row {
-    text-align: left !important;
-    align-items: stretch !important;   /* يخلي الصندوق يأخذ العرض بالكامل */
-  }
+            .contact-icons a {
+                width: 52px;
+                height: 52px;
+            }
 
-  .about-box {
-    padding: 0.95rem 0.95rem !important;     /* حواف أضيق = كلمات أكثر بالسطر */
-  }
+            .contact-icons a img {
+                width: 24px;
+                height: 24px;
+            }
+        }
 
-  .about-box p {
-    font-size: 0.1rem !important;     /* كان تقريبًا 1.1rem */
-    line-height: 1.6 !important;
-    text-align: left !important;
-    /* hyphens: auto;                      اختياري: يكسر الكلمات بطريقة مرتبة */
-  }
+        @media (max-width: 768px) {
+            .contact-row {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 0;
+                justify-content: space-between;
+            }
 
-  /* خليك ضامن أن العنوان نفسه بمحاذاة لليسار */
-  .about-aligned-title {
-    align-self: flex-start !important;
-    margin-left: 0.25rem;
-  }
-}
+            .contact-row>* {
+                flex: 0 0 auto;
+                font-size: 0.85rem;
+                padding: 4px;
+            }
+        }
 
-/* الشاشات الأصغر جدًا */
-@media (max-width: 420px) {
-  .about-box p { font-size: 0.9rem !important; }
-}
+        @media (max-width: 768px) {
+            .about-section {
+                margin-top: 0.5rem !important;
+                padding-top: 0 !important;
+            }
+        }
 
+        @media (max-width: 768px) {
+            .about-row {
+                text-align: left !important;
+                align-items: stretch !important;
+            }
 
-@media (max-width: 768px) {
-  /* Reduce top padding for the whole hero section */
- .hero {
-    padding-top: 1rem !important;   /* بدل 4rem أو 8rem */
-    padding-bottom: 2rem !important;
-  }
+            .about-box {
+                padding: 0.95rem 0.95rem !important;
+            }
 
-  /* Reduce gap between image and text */
-  .hero-content {
-    flex-direction: column-reverse !important;
-    gap: 1rem !important;
-  }
+            .about-box p {
+                font-size: 0.1rem !important;
+                line-height: 1.6 !important;
+                text-align: left !important;
+            }
 
-  /* Adjust image margins */
-  .hero-image {
-    margin-top: 0rem !important;  /* reduce empty space above image */
-    margin-bottom: 1rem !important; /* reduce space below image before text */
-  }
-  
-}
-/* Mobile: اجعليه fixed مع عرض كامل */
-@media (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-  /* حطّي مسافة علوية تساوي ارتفاع النافبار (تتضبط بالـ JS تحت) */
-  body { padding-top: var(--nav-h, 64px); }
-}
+            .about-aligned-title {
+                align-self: flex-start !important;
+                margin-left: 0.25rem;
+            }
+        }
 
-/* عالج مشكلة الانتقال ليظهر العنوان تحت النافبار */
-html {
-  scroll-padding-top: 80px; /* مساوي تقريباً لارتفاع النافبار */
-}
-
-/* قلل المسافة بين العنوان والصندوق */
-.about-row {
-  margin-top: 5rem !important;   /* بدل 6rem أو 10rem */
-  padding-top: 0.5rem !important;  /* بدل 3rem */
-  gap: 1rem !important;            /* بدل 2rem */
-}
-
-/* .about-aligned-title {
-  margin-top: 0 !important;
-} */
-
-/* للجوال */
-@media (max-width: 768px) {
-  .about-row {
-    margin-top: 0rem !important;
-    padding-top: 0 !important;
-    gap: 0.75rem !important;
-  }
-}
+        @media (max-width: 420px) {
+            .about-box p {
+                font-size: 0.9rem !important;
+            }
+        }
 
 
+        @media (max-width: 768px) {
+
+            .hero {
+                padding-top: 1rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse !important;
+                gap: 1rem !important;
+            }
+
+            .hero-image {
+                margin-top: 0rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+
+            body {
+                padding-top: var(--nav-h, 64px);
+            }
+        }
+
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        .about-row {
+            margin-top: 5rem !important;
+            padding-top: 0.5rem !important;
+            gap: 1rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .about-row {
+                margin-top: 0rem !important;
+                padding-top: 0 !important;
+                gap: 0.75rem !important;
+            }
+        }
     </style>
 </head>
 
 <body>
-<nav class="navbar" role="navigation" aria-label="Main Navigation">
-  <div class="container navbar-container">
-    <div class="logo">RANA</div>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container navbar-container">
+            <div class="logo">RANA</div>
 
-    <!-- Toggle Icon with ARIA -->
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <i class="fas fa-bars"></i>
-    </button>
+            <!-- Toggle Icon with ARIA -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <div class="nav-links" id="nav-links">
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT ME</a>
-      <a href="#skills">SKILLS</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-  </div>
-</nav>
+            <div class="nav-links" id="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT ME</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </div>
+    </nav>
 
 
     <header class="hero" id="home">
@@ -1008,36 +965,37 @@ html {
         <div class="copyright">
             &copy; 2025 Rana Alotmi. All Rights Reserved.
         </div>
-   </footer>
+    </footer>
 
 
-<script>
-  const toggleBtn = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
 
-  function toggleMenu() {
-    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
-    toggleBtn.setAttribute("aria-expanded", !expanded);
+        function toggleMenu() {
+            const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+            toggleBtn.setAttribute("aria-expanded", !expanded);
 
-    navLinks.classList.toggle("expanded");
-    navLinks.classList.toggle("collapsed");
-  }
+            navLinks.classList.toggle("expanded");
+            navLinks.classList.toggle("collapsed");
+        }
 
-  toggleBtn.addEventListener("click", toggleMenu);
+        toggleBtn.addEventListener("click", toggleMenu);
 
-  // Collapse on load for mobile
-  if (window.innerWidth < 768) {
-    navLinks.classList.add("collapsed");
-  }
+        // Collapse on load for mobile
+        if (window.innerWidth < 768) {
+            navLinks.classList.add("collapsed");
+        }
 
-  // Close menu on resize if back to desktop
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
-      navLinks.classList.remove("collapsed", "expanded");
-      toggleBtn.setAttribute("aria-expanded", false);
-    }
-  });
-</script>
+        // Close menu on resize if back to desktop
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+                navLinks.classList.remove("collapsed", "expanded");
+                toggleBtn.setAttribute("aria-expanded", false);
+            }
+        });
+    </script>
 
 </body>
+
 </html>
