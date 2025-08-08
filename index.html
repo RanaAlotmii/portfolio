@@ -249,10 +249,19 @@
     padding-top: 1rem;
 }
 
-/* ===== NAVBAR – FINAL MOBILE OVERRIDES (append at end) ===== */
+/* @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    } */
+
+
+/*  */
+/* ===== NAVBAR — MOBILE OVERRIDES (append at end) ===== */
 @media (max-width: 768px) {
-  /* Keep desktop layout on phones */
+  /* keep bar compact */
   .navbar { padding: 0.4rem 0; }
+
+  /* force desktop-like row layout */
   .navbar-container {
     flex-direction: row !important;
     align-items: center !important;
@@ -260,54 +269,63 @@
     gap: 0 !important;
   }
 
-  /* Hide hamburger on mobile; we’re keeping full links */
+  /* hide hamburger on phones (we're showing full menu) */
   .menu-toggle { display: none !important; }
 
-  /* Show links inline, prevent wrapping, tighten spacing */
-  .nav-links {
+  /* always show links inline on phones — even if JS added .collapsed */
+  .nav-links,
+  .nav-links.collapsed,
+  .nav-links.expanded {
     display: flex !important;
     flex-direction: row !important;
     align-items: center;
     justify-content: flex-end;
-    gap: 0.75rem;               /* tighter than desktop */
-    margin-top: 0 !important;   /* cancel earlier margin-top */
+    gap: 0.75rem;              /* tighter spacing for phones */
+    margin: 0 !important;
     padding: 0 !important;
     width: auto !important;
-    max-width: 100%;
+    max-height: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
     flex-wrap: nowrap;
   }
 
   .nav-links a {
-    font-size: 0.78rem;         /* smaller so everything fits */
+    font-size: 0.78rem;        /* smaller so everything fits */
     letter-spacing: 0.4px;
-    padding: 0;                 /* remove extra hit area */
-    margin: 0;
-    white-space: nowrap;        /* keep each item on one line */
+    white-space: nowrap;
     line-height: 1.1;
+    padding: 0;
+    margin: 0;
   }
 
-  /* Shrink the brand to match */
   .logo {
     font-size: 1.05rem !important;
     letter-spacing: 0.5px;
     font-weight: 800;
   }
 
-  /* Prevent tiny overflow on very narrow phones */
   html, body { overflow-x: hidden; }
-}
 
-/* Extra-tight on very small phones */
+
 @media (max-width: 420px) {
   .navbar { padding: 0.35rem 0; }
-
   .nav-links { gap: 0.55rem; }
-
   .nav-links a { font-size: 0.72rem; }
-
   .logo { font-size: 0.98rem !important; }
+}
 
 
+
+
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        padding: 1rem 0;
+    }
 
     .navbar-container {
         flex-direction: row;
