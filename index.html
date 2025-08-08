@@ -751,17 +751,36 @@
   }
 }
 
+/* الجوال: اجعل نص About بمحاذاة لليسار وأصغر حجمًا */
 @media (max-width: 768px) {
-  #about {
-    margin-top: 1rem !important; /* قلل المسافة */
-    padding-top: 0 !important;   /* شيل أي padding */
+  .about-row {
+    text-align: left !important;
+    align-items: stretch !important;   /* يخلي الصندوق يأخذ العرض بالكامل */
   }
 
-  .about-row {
-    margin-top: 1rem !important; /* تصغير إضافي للمسافة */
-    padding-top: 0 !important;
+  .about-box {
+    padding: 1rem 1rem !important;     /* حواف أضيق = كلمات أكثر بالسطر */
+  }
+
+  .about-box p {
+    font-size: 0.95rem !important;     /* كان تقريبًا 1.1rem */
+    line-height: 1.6 !important;
+    text-align: left !important;
+    hyphens: auto;                      /* اختياري: يكسر الكلمات بطريقة مرتبة */
+  }
+
+  /* خليك ضامن أن العنوان نفسه بمحاذاة لليسار */
+  .about-aligned-title {
+    align-self: flex-start !important;
+    margin-left: 0.25rem;
   }
 }
+
+/* الشاشات الأصغر جدًا */
+@media (max-width: 420px) {
+  .about-box p { font-size: 0.9rem !important; }
+}
+
 
 @media (max-width: 768px) {
   /* Reduce top padding for the whole hero section */
