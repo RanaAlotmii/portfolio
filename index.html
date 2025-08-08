@@ -730,6 +730,20 @@
   .contact-icons a { width: 52px; height: 52px; }
   .contact-icons a img { width: 24px; height: 24px; }
 }
+@media (max-width: 768px) {
+  .contact-row {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents items from going to a second row */
+    gap: 0; /* Removes extra space between elements */
+    justify-content: space-between; /* Adjust spacing between them */
+  }
+
+  .contact-row > * {
+    flex: 0 0 auto; /* Prevent shrinking weirdly */
+    font-size: 0.85rem; /* Reduce size to fit */
+    padding: 4px; /* Optional: tighter padding */
+  }
+}
 
 
     </style>
