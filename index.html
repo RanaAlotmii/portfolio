@@ -783,6 +783,18 @@
     margin-bottom: 1rem !important; /* reduce space below image before text */
   }
 }
+/* Mobile: اجعليه fixed مع عرض كامل */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* حطّي مسافة علوية تساوي ارتفاع النافبار (تتضبط بالـ JS تحت) */
+  body { padding-top: var(--nav-h, 64px); }
+}
 
 
     </style>
