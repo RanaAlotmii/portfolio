@@ -765,16 +765,15 @@
 
 @media (max-width: 768px) {
   /* Reduce top padding for the whole hero section */
-  .hero {
-    padding-top: 4rem !important; /* was 8rem, reduced */
-    padding-bottom: 3rem !important;
+ .hero {
+    padding-top: 1rem !important;   /* بدل 4rem أو 8rem */
+    padding-bottom: 2rem !important;
   }
 
   /* Reduce gap between image and text */
   .hero-content {
-    gap: 1.5rem !important; /* was 6rem */
-        flex-direction: column-reverse !important;
-    text-align: center;
+    flex-direction: column-reverse !important;
+    gap: 1rem !important;
   }
 
   /* Adjust image margins */
@@ -782,6 +781,7 @@
     margin-top: 0rem !important;  /* reduce empty space above image */
     margin-bottom: 1rem !important; /* reduce space below image before text */
   }
+  
 }
 /* Mobile: اجعليه fixed مع عرض كامل */
 @media (max-width: 768px) {
@@ -795,6 +795,7 @@
   /* حطّي مسافة علوية تساوي ارتفاع النافبار (تتضبط بالـ JS تحت) */
   body { padding-top: var(--nav-h, 64px); }
 }
+
 
 
     </style>
