@@ -700,6 +700,38 @@
   .footer-links a { font-size: 0.9rem; }
 }
 
+/* Contact icons — mobile */
+@media (max-width: 480px) {
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;        /* ممنوع يلف لسطر ثاني */
+    gap: 0.9rem;              /* مسافة أصغر بين الأيقونات */
+  }
+
+  .contact-icons a {
+    flex: 0 0 auto;           /* ثبّتي عرض كل أيقونة */
+    width: 58px;
+    height: 58px;
+    font-size: 1.4rem;        /* أصغر شوي */
+  }
+
+  /* الصور داخل الأيقونة (mail / github / linkedin / x) */
+  .contact-icons a img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* شاشات أصغر جدًا – مزيد تصغير لو لسه يلف */
+@media (max-width: 360px) {
+  .contact-icons { gap: 0.7rem; }
+  .contact-icons a { width: 52px; height: 52px; }
+  .contact-icons a img { width: 24px; height: 24px; }
+}
+
+
     </style>
 </head>
 
